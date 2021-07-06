@@ -1,0 +1,41 @@
+
+/*-----------------------------------------------------------------------*/
+// $Mixin
+// Aquí van los mixin mas usados del projecto
+/*------------------------------------------------------------------------*/
+
+// *
+// *
+// * Definimos la funcion para uso rapido y practico de las mediaquery
+// *
+// * Ejemplo de uso MIN:
+// *
+// *        @include min(s)
+// *            width: 100px
+// *
+// * Ejemplo de uso MAX:
+// *
+// *        @include max(l)
+// *            width: 200px
+// *
+// *
+
+// $breakpoints: ("xs": 0, "s": 320px, "m": 480px, "l": 768px, "xl": 1024px, "hd": 1199px)
+
+//     // Mediaquery MIN
+// @mixin min($breakpoints)
+//     @if map-has-key($breakpoints, $breakpoint)
+//         @media screen and ( min-width: map-get($breakpoints, $breakpoint))
+//             @content
+
+//     @else
+//         @warn "El valor '# { $breakpoint }' no ha sido declarado como breakpoint"
+
+// // Mediaquery MAX
+// @mixin max($breakpoints)
+//     @if map-has-key($breakpoints, $breakpoint)
+//         @media screen and ( max-width: map-get($breakpoints, $breakpoint))
+//             @content
+
+//     @else
+//         @warn "El valor '# { $breakpoint }' no ha sido declarado como breakpoint"
